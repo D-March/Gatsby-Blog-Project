@@ -18,22 +18,25 @@ const BlogPage = () => {
             }
         }
     `)
-    const posts = data.allMarkdownRemark.edges.map((p) => 
-                            <li>
-                                <h2 key={p.node.frontmatter.title}>
+    
+    const posts = data.allMarkdownRemark.edges.map((p, index)  => 
+                            <li key={index}>
+                                <h2>
                                     {p.node.frontmatter.title}
                                 </h2>
-                                <p key={p.node.frontmatter.date}>
+                                <p>
                                     {p.node.frontmatter.date}
                                 </p>
                             </li>
-                        );
+                    );
+
     return (
             <Layout>
                 <h1>A blog about the blog</h1>
                 <ol>
                     {posts}
                 </ol>
+
             </Layout>
             
     )
