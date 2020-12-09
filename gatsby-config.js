@@ -1,10 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Front End Developer Blog`,
-    description: `A blog site for a front end developer created with Gatsby`,
-    author: `D-March`,
+    title: 'Web Developer Blog',
+    description: 'A blog site for a web developer created with Gatsby',
+    author: 'D-March',
   },
   plugins: [
-    "gatsby-plugin-sass"
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src/`
+      }
+    }
   ],
 }
