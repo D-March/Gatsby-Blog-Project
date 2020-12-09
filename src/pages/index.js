@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
+import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
-    <div>
-      <h1>Front End Developer Blog</h1>
-      <h2>Damian Marchewka</h2>
-      <Link to="/about">About</Link>
-    </div>
+    <Layout>
+      <h1>Damian Marchewka</h1>
+      <p>Need a developer?</p>
+      <Link to="/contact"><button>Contact Me</button></Link>
+    </Layout>
   )
 }
 
