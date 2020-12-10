@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Web Developer Blog',
-    description: 'A blog site for a web developer created with Gatsby',
+    title: 'A blog about the blog',
+    description: 'A blog site created with Gatsby',
     author: 'D-March',
   },
   plugins: [
@@ -18,20 +18,16 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-relative-images`,
-            options: {
-              staticFolderName: 'static',
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            }
+              'gatsby-remark-relative-images',
+              {
+                resolve: `gatsby-remark-images`,
+                options: {
+                  maxWidth: 590,
+                  linkImagesToOriginal: false
+              }
           }
         ]
       }
     }
-  ],
+  ]
 }

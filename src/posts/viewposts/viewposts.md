@@ -19,7 +19,7 @@ I created a new const variable inside the if statement and using the path.basena
 <br>
 Then using createNodeField from the onCreateNode API I'm able to use the slug for each blog post.
 
-![Grab Slug](https://i.imgur.com/smflQNm.jpg)
+![Grab Slug](grab-slug.png)
 
 In order to show each blog post I created a blog post template in the templates directory.
 
@@ -31,7 +31,7 @@ Using the graphql method from the API, I made a query (which I got using GraphQL
 <br>
 I then used the forEach method to execute the createPages function for every element in the array I got from the query, specifying the component(blogPostTemplate), path and context.
 
-![Create Pages](https://i.imgur.com/QdTtt2I.jpg)
+![Create Pages](create-pages.png)
 
 Next I modified the query which I made on the blog page to also grab the slug and wrapped the blog title with the Gatsby Link component to access each blog post from the main blog page.
 <br>
@@ -39,4 +39,4 @@ To use the post data on the blog template I had to create another query using gr
 <br>
 Then I added a props property to the component and added the query data into their respective tags.
 
-![Template Content](https://i.imgur.com/CxUU7my.jpg)
+![Template Content](template-content.png)

@@ -7,7 +7,19 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(237, 237, 237);
 }
+
+@font-face {
+  font-family: "M-E";
+  src: url("../fonts/monumentextended-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "M-E Bold";
+  src: url("../fonts/monumentextended-ultrabold.woff2") format("woff2");
+}
+
 article,
 aside,
 details,

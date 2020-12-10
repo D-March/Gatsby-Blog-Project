@@ -2,13 +2,13 @@ import React from 'react'
 import Footer from "../components/footer"
 import Header from "../components/header"
 import "../styles/index.scss"
-import layoutStyles from './layout.module.scss'
+import landingStyles from './landing.module.scss'
 
-const Layout = (props) => {
+const Landing = (props) => {
     return (
-        <div className={layoutStyles.container}>
+        <div className={landingStyles.container}>
             <Header />
-            <div className={layoutStyles.content}>
+            <div className={landingStyles.content}>
                 {props.children}
             </div>
             <Footer />
@@ -16,4 +16,4 @@ const Layout = (props) => {
     )
 }
 
-export default Layout
+export default Landing
