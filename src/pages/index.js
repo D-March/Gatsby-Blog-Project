@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 
 import Landing from "../components/landing"
 import indexStyles from './index.module.scss'
+import Head from '../components/head'
 import pen from "../images/pen.png"
 import watercolor from "../images/watercolor.png"
 
@@ -48,6 +49,7 @@ const IndexPage = () => {
 
   return (
     <Landing>
+      <Head title="Home"/>
       <div className={indexStyles.content}>
           <h1 ref={contentRef1}>
             <span>I'm Damian</span>

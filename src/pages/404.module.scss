@@ -1,0 +1,108 @@
+$blue: #323ff0;
+$white: #ece8e1;
+$black: #0f1923;
+$outline: rgba(236, 232, 225, 0.5);
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box {
+  width: 50%;
+  align-self: center;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+button {
+  width: 100%;
+  font-family: "M-E";
+  margin-bottom: 3rem;
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border: 0;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  color: $blue;
+}
+
+button::before {
+  border-bottom: 0;
+  top: 0;
+}
+
+button::after {
+  border-top: 0;
+  bottom: 0;
+}
+
+button:hover {
+  color: $white;
+}
+
+.label {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.label:before {
+  content: "";
+  height: 100%;
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.hover-effect {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  top: 0;
+  left: -5%;
+  z-index: 1;
+  background-color: $blue;
+  transform: translateX(-100%) skew(-10deg);
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+button:hover .hover-effect {
+  transform: translateX(0) skew(-10deg);
+}
+
+.label-text {
+  position: relative;
+  display: block;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.label-text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.6rem;
+  width: 0.6rem;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.2s ease-in;
+}
+
+.outline .label::before,
+.outline .label::after {
+  border: 2px solid $blue;
+}

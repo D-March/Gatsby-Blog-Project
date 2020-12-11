@@ -1,15 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: 'A blog about the blog',
+    title: 'The Blog - About A Blog',
     description: 'A blog site created with Gatsby',
     author: 'D-March',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: 'f4jj3n0yoio3',
-        accessToken: '3VAdUGhqcZeWLYx6YOeKM6PiSJkXe94LLGvMQGcgDbA',
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       }
     },
     'gatsby-plugin-sass',

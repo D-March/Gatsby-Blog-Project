@@ -1,10 +1,12 @@
 import React, { useRef, useEffect } from 'react'
-import { gsap, Elastic, TweenMax } from "gsap"
-import Layout from "../components/layout"
-import contactStyles from "./contact.module.scss"
+import { gsap, Elastic, TweenMax } from 'gsap'
 
+
+import Layout from '../components/layout'
+import Head from '../components/head'
+import contactStyles from './contact.module.scss'
 import { FaMobile } from 'react-icons/fa'
-import { MdEmail } from "react-icons/md"
+import { MdEmail } from 'react-icons/md'
 
 const ContactPage = () => {
 
@@ -70,6 +72,7 @@ const ContactPage = () => {
 
     return (
             <Layout>
+                <Head title="Contact" />
                 <div className={contactStyles.container} ref={containerRef}>
                     <h1 ref={contentRef1}>Contact Me</h1>
                     <p ref={contentRef2}>

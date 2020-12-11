@@ -1,11 +1,11 @@
 import React, { useRef, useEffect } from 'react'
-import { gsap } from "gsap"
+import { gsap } from 'gsap'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
-
 import Layout from '../components/layout'
+import Head from '../components/head'
 import blogStyles from './blog.module.scss'
-import meBlog from "../images/blog-me.png"
+import meBlog from '../images/blog-me.png'
 
 const BlogPage = () => {
 
@@ -48,6 +48,7 @@ const BlogPage = () => {
 
 
     const data = useStaticQuery(graphql`
+        query {
             allContentfulBlogPost (
                 sort: {
                     fields: publishedDate,
@@ -81,6 +82,7 @@ const BlogPage = () => {
 
     return (
             <Layout>
+                <Head title="Blog" />
                 <div className={blogStyles.container}>
                     <h1 ref={titleRef}>Posts</h1>
                     <ol className={blogStyles.posts} >

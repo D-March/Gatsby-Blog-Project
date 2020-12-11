@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from 'react'
 import { Link } from 'gatsby'
-import { gsap } from "gsap"
+import { gsap } from 'gsap'
 
-import Layout from "../components/layout"
-import aboutStyles from "./about.module.scss"
-import me from "../images/about-me.png"
+import Layout from '../components/layout'
+import Head from '../components/head'
+import aboutStyles from './about.module.scss'
+import me from '../images/about-me.png'
 
 const AboutPage = () => {
 
@@ -45,6 +46,7 @@ const AboutPage = () => {
     
     return (
             <Layout>
+                <Head title="About" />
                 <div className={aboutStyles.container}>
                     <h1 ref={contentRef1}>About Me</h1>
                     <p ref={contentRef2}>
