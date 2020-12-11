@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { Link } from 'gatsby'
-import { gsap } from "gsap";
+import { gsap } from "gsap"
 
 import Layout from "../components/layout"
 import aboutStyles from "./about.module.scss"
@@ -54,11 +54,11 @@ const AboutPage = () => {
                         The aim of this blog site was to practice working with Gatsby and GSAP and while doing so I documented some of that journey in the form of blog posts which you can read on this very site!
                     </p>
                     <p ref={contentRef4}>
-                        I'm always excited and keen to learn new technologies and strive towards providing a unique experience on the web, being able to learn these technologies will help me work towards that.
+                        I'm always excited and keen to learn new technologies and strive towards providing a unique experience on the web, being able to these use technologies is another step in achieving that.
                     </p>
-                    <p ref={contentRef5}>Need a developer or want to see more of my work? Then click the button below!</p>
+                    <p ref={contentRef5}>Need a developer or want to see more of my work?</p>
                     <div className={aboutStyles.box} ref={contentRef6}>
-                        <Link to="/blog">
+                        <Link to="/contact">
                             <button className={aboutStyles.outline} type="button">
                                 <div className={aboutStyles.label}>
                                     <span className={aboutStyles.hoverEffect}></span>

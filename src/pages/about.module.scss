@@ -112,3 +112,38 @@ button:hover .hover-effect {
 .outline .label::after {
   border: 2px solid $blue;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    img {
+      left: 0;
+      bottom: 0;
+      height: 35%;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .container {
+    img {
+      height: 20%;
+    }
+  }
+  .box {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    img {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .box {
+    width: 100%;
+  }
+}
