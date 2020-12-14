@@ -52,7 +52,7 @@ const BlogPage = () => {
             allContentfulBlogPost (
                 sort: {
                     fields: publishedDate,
-                    order: DESC
+                    order: ASC
                 }
                 ) {
                 edges {
